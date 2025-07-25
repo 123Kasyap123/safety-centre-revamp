@@ -2,10 +2,12 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Shield, ArrowRight, Heart, Users } from "lucide-react";
 import { Link } from "react-router-dom";
+import Header from "@/components/Header";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
+      <Header />
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-br from-brand-primary to-brand-secondary py-20 lg:py-32">
         <div className="absolute inset-0 bg-gradient-to-br from-brand-primary/20 to-brand-secondary/20 opacity-20"></div>

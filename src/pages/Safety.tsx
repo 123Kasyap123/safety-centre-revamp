@@ -6,6 +6,7 @@ import { TransparencyReports } from "@/components/safety/TransparencyReports";
 import { ComplianceGovernance } from "@/components/safety/ComplianceGovernance";
 import { FAQs } from "@/components/safety/FAQs";
 import { ExternalResources } from "@/components/safety/ExternalResources";
+import Header from "@/components/Header";
 import safetyContent from "@/content/safety.json";
 
 const Safety = () => {
@@ -83,6 +84,7 @@ const Safety = () => {
 
   return (
     <div className="min-h-screen">
+      <Header />
       {/* SEO Meta Tags - would normally be handled by Head component in Next.js */}
       <title>{processedContent.meta.title}</title>
       <meta name="description" content={processedContent.meta.description} />
