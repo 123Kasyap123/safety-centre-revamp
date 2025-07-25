@@ -1,0 +1,194 @@
+{
+  "meta": {
+    "title": "FRND Safety Centre - Your Safety is Our Priority",
+    "description": "Learn about FRND's comprehensive safety measures, community guidelines, and transparency reports. We're committed to creating a safe space for meaningful connections.",
+    "keywords": "FRND safety, online safety, community guidelines, transparency report, user protection"
+  },
+  "hero": {
+    "title": "Safety isn't a feature. It's the foundation of FRND.",
+    "subtitle": "We've built a comprehensive, multi-layered safety system that proactively protects our community while fostering genuine connections.",
+    "primaryCta": "Read how we keep you safe",
+    "secondaryCta": "See our latest transparency report"
+  },
+  "multiLayerSafety": {
+    "title": "Multi-Layer Safety",
+    "subtitle": "Our proactive approach to safety combines technology, human oversight, and user empowerment.",
+    "layers": [
+      {
+        "icon": "shield-check",
+        "title": "Account Integrity",
+        "description": "KYC verification for all creators ensures authentic profiles and builds trust in every interaction."
+      },
+      {
+        "icon": "bot",
+        "title": "AI Copilot",
+        "description": "Real-time AI assistance and proactive moderation to identify and prevent harmful content before it spreads."
+      },
+      {
+        "icon": "video",
+        "title": "100% Coverage in Video Calls",
+        "description": "Every video call is proactively monitored to ensure compliance with our community guidelines."
+      },
+      {
+        "icon": "users",
+        "title": "User Tools",
+        "description": "Block, remove, kick-out features with fast reporting and our 24-hour action commitment.",
+        "subItems": [
+          "Report: We commit to act within 24 hours.",
+          "Helpline: {{helpline_number}} (Available {{helpline_hours}})"
+        ]
+      }
+    ]
+  },
+  "communityGuidelines": {
+    "title": "Community Guidelines",
+    "intro": "The following is allowed:",
+    "allowed": [
+      "Friendly, respectful conversations",
+      "Conversations that do not violate personal boundaries"
+    ],
+    "banner": {
+      "text": "Certain behaviours—explicit content, harassment, personal-data requests and spam—are strictly banned.",
+      "linkText": "View full policy",
+      "linkUrl": "/safety/guidelines"
+    },
+    "notAllowed": {
+      "title": "Key things NOT allowed",
+      "items": [
+        "Explicit or inappropriate content",
+        "Harassment or bullying behavior",
+        "Sharing personal information without consent",
+        "Spam or promotional content",
+        "Impersonation or fake profiles"
+      ]
+    }
+  },
+  "transparency": {
+    "title": "Transparency Reports",
+    "subtitle": "We believe in complete transparency about our safety measures and their effectiveness.",
+    "alvarezStudy": {
+      "text": "In a study conducted by Alvarez & Marsal, {{alvarez_compliance_percent}}% of the calls audited were found to be compliant with our community guidelines and terms of use."
+    },
+    "statement": "We at FRND are committed to continuous improvement, proactive moderation, and fair enforcement of our community guidelines. Our transparency reports provide detailed insights into our safety measures and their real-world impact.",
+    "latestReport": {
+      "text": "Our latest report for {{latest_month}} {{latest_year}} shows that {{latest_compliance_percent}}% of the calls audited comply with our community guidelines."
+    },
+    "previousReports": {
+      "title": "Download previous reports",
+      "description": "Access our monthly transparency reports to track our safety performance over time."
+    }
+  },
+  "compliance": {
+    "title": "Compliance & Governance",
+    "subtitle": "Meet our dedicated team ensuring FRND remains a safe and compliant platform.",
+    "officers": [
+      {
+        "title": "Chief Compliance Officer",
+        "name": "{{cco_name}}",
+        "email": "{{cco_email}}",
+        "address": "{{cco_address}}",
+        "sla": "Response within 48 hours"
+      },
+      {
+        "title": "Grievance Officer",
+        "name": "{{grievance_officer_name}}",
+        "email": "{{grievance_officer_email}}",
+        "address": "{{grievance_officer_address}}",
+        "sla": "Response within 24 hours"
+      },
+      {
+        "title": "Nodal Officer",
+        "name": "{{nodal_officer_name}}",
+        "email": "{{nodal_officer_email}}",
+        "address": "{{nodal_officer_address}}",
+        "sla": "Response within 24 hours"
+      },
+      {
+        "title": "HR",
+        "name": "{{hr_name}}",
+        "email": "{{hr_email}}",
+        "address": "{{hr_address}}",
+        "sla": "Response within 72 hours"
+      }
+    ]
+  },
+  "faqs": {
+    "title": "Frequently Asked Questions",
+    "items": [
+      {
+        "question": "How does FRND ensure user safety during video calls?",
+        "answer": "We employ AI-powered monitoring for 100% of video calls, combined with real-time moderation and instant reporting tools. Our system can detect inappropriate behavior and take immediate action."
+      },
+      {
+        "question": "What happens when I report someone?",
+        "answer": "We commit to reviewing all reports within 24 hours. Our team investigates each case thoroughly and takes appropriate action, which may include warnings, temporary suspensions, or permanent bans."
+      },
+      {
+        "question": "How is my personal data protected?",
+        "answer": "We follow strict data protection protocols and never share personal information with other users. Our KYC process is secure and your verification details are encrypted and stored safely."
+      },
+      {
+        "question": "Can I block or remove someone during a call?",
+        "answer": "Yes, you have full control. You can block users, remove them from calls, or kick them out immediately. These actions are instant and the other person cannot rejoin without your permission."
+      },
+      {
+        "question": "What if I encounter inappropriate behavior?",
+        "answer": "Use our instant reporting feature or contact our helpline at {{helpline_number}}. Our team is available {{helpline_hours}} to assist you."
+      },
+      {
+        "question": "How often do you publish transparency reports?",
+        "answer": "We publish monthly transparency reports that include compliance statistics, safety improvements, and performance metrics. These reports are available for download in our transparency section."
+      }
+    ]
+  },
+  "externalResources": {
+    "title": "External Safety Resources",
+    "subtitle": "Additional support and resources for your safety and well-being.",
+    "resources": [
+      {
+        "name": "Women's Helpline",
+        "number": "1091",
+        "description": "24/7 support for women in distress",
+        "type": "phone"
+      },
+      {
+        "name": "Cybercrime Helpline",
+        "number": "1930",
+        "description": "Report cyber crimes and online fraud",
+        "type": "phone"
+      },
+      {
+        "name": "National Commission for Women",
+        "url": "https://ncw.nic.in/",
+        "description": "Official portal for women's rights and safety",
+        "type": "website"
+      },
+      {
+        "name": "Cyber Crime Portal",
+        "url": "https://cybercrime.gov.in/",
+        "description": "Government portal to report cyber crimes",
+        "type": "website"
+      }
+    ]
+  },
+  "config": {
+    "helpline_number": "+91-XXXX-XXXXXX",
+    "helpline_hours": "9 AM - 9 PM",
+    "alvarez_compliance_percent": "95",
+    "latest_month": "December",
+    "latest_year": "2024",
+    "latest_compliance_percent": "95.29",
+    "cco_name": "Dr. Jane Smith",
+    "cco_email": "compliance@frnd.app",
+    "cco_address": "FRND Inc., 123 Safety Street, Tech City, TC 12345",
+    "grievance_officer_name": "Mr. John Doe",
+    "grievance_officer_email": "grievance@frnd.app", 
+    "grievance_officer_address": "FRND Inc., 123 Safety Street, Tech City, TC 12345",
+    "nodal_officer_name": "Ms. Sarah Johnson",
+    "nodal_officer_email": "nodal@frnd.app",
+    "nodal_officer_address": "FRND Inc., 123 Safety Street, Tech City, TC 12345",
+    "hr_name": "Ms. Emily Brown",
+    "hr_email": "hr@frnd.app",
+    "hr_address": "FRND Inc., 123 Safety Street, Tech City, TC 12345"
+  }
+}
