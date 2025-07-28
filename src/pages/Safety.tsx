@@ -7,6 +7,7 @@ import { ComplianceGovernance } from "@/components/safety/ComplianceGovernance";
 import { FAQs } from "@/components/safety/FAQs";
 import { ExternalResources } from "@/components/safety/ExternalResources";
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 import safetyContent from "@/content/safety.json";
 
 const Safety = () => {
@@ -157,11 +158,13 @@ const Safety = () => {
         items={processedContent.faqs.items}
       />
 
-      <ExternalResources
+      <ExternalResources 
         title={processedContent.externalResources.title}
         subtitle={processedContent.externalResources.subtitle}
         resources={processedContent.externalResources.resources}
       />
+      
+      <Footer />
     </div>
   );
 };

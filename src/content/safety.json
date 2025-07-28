@@ -96,20 +96,12 @@
         "answer": "We commit to reviewing all reports within 24 hours. Our team investigates each case thoroughly and takes appropriate action, which may include warnings, temporary suspensions, or permanent bans."
       },
       {
-        "question": "How is my personal data protected?",
-        "answer": "We follow strict data protection protocols and never share personal information with other users. Our KYC process is secure and your verification details are encrypted and stored safely."
-      },
-      {
         "question": "Can I block or remove someone during a call?",
         "answer": "Yes, you have full control. You can block users, remove them from calls, or kick them out immediately. These actions are instant and the other person cannot rejoin without your permission."
       },
       {
         "question": "What if I encounter inappropriate behavior?",
         "answer": "Use our instant reporting feature or contact our helpline at {{helpline_number}}. Our team is available {{helpline_hours}} to assist you."
-      },
-      {
-        "question": "How often do you publish transparency reports?",
-        "answer": "We publish monthly transparency reports that include compliance statistics, safety improvements, and performance metrics. These reports are available for download in our transparency section."
       }
     ]
   },
