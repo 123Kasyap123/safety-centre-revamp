@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Instagram, Linkedin } from "lucide-react";
-import frndLogo from "@/assets/frnd-cursive-logo.png";
+import frndLogoWhite from "@/assets/frnd-cursive-logo-white.png";
 
 
 const Footer = () => {
@@ -11,12 +11,9 @@ const Footer = () => {
           {/* Logo Section */}
           <div className="lg:col-span-2 flex justify-start">
             <img 
-              src={frndLogo} 
+              src={frndLogoWhite} 
               alt="FRND" 
               className="h-12 w-auto"
-              style={{ 
-                filter: 'brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%)'
-              }}
             />
           </div>
 
