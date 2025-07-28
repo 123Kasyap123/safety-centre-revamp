@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Instagram, Linkedin } from "lucide-react";
-import frndLogo from "@/assets/frnd-logo-cloudfront.webp";
+import frndLogo from "@/assets/frnd-logo-4x.webp";
 
 
 const Footer = () => {
@@ -13,7 +13,7 @@ const Footer = () => {
             <img 
               src={frndLogo} 
               alt="FRND" 
-              className="h-12 w-auto"
+              className="h-12 w-auto brightness-0 invert"
             />
           </div>
 
