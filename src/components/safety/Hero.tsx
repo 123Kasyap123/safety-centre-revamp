@@ -45,7 +45,7 @@ export const Hero = ({ title, subtitle, primaryCta, secondaryCta, onPrimaryCta, 
               onClick={onSecondaryCta}
               variant="outline" 
               size="lg"
-              className="border-2 border-white text-white hover:bg-white hover:text-frnd-red font-semibold"
+              className="border-2 border-white text-white bg-white/20 hover:bg-white hover:text-frnd-red font-semibold"
             >
               <FileText className="h-5 w-5 mr-2" />
               {secondaryCta}
