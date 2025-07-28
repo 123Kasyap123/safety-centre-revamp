@@ -34,7 +34,7 @@ export const MultiLayerSafety = ({ title, subtitle, layers }: MultiLayerSafetyPr
           </p>
         </div>
         
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-6 sm:grid-cols-1 lg:grid-cols-3 max-w-4xl mx-auto">
           {layers.map((layer, index) => {
             const IconComponent = iconMap[layer.icon as keyof typeof iconMap] || ShieldCheck;
             

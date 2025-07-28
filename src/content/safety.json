@@ -25,11 +25,6 @@
         "description": "Real-time AI assistance and proactive moderation to identify and prevent harmful content before it spreads."
       },
       {
-        "icon": "video",
-        "title": "100% Coverage in Video Calls",
-        "description": "Every video call is proactively monitored to ensure compliance with our community guidelines."
-      },
-      {
         "icon": "users",
         "title": "User Tools",
         "description": "Block, remove, kick-out features with fast reporting and our 24-hour action commitment."
@@ -52,7 +47,7 @@
   },
   "transparency": {
     "title": "Transparency Reports",
-    "subtitle": "We believe in complete transparency about our safety measures and their effectiveness.",
+    "subtitle": "We at FRND are committed to maintaining the highest standards of safety and compliance, and we believe in complete transparency about our efforts.",
     "alvarezStudy": {
       "text": "In a study conducted by Alvarez & Marsal, {{alvarez_compliance_percent}}% of the calls audited were found to be compliant with our community guidelines and terms of use."
     },

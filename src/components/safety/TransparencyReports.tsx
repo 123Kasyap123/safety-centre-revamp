@@ -2,6 +2,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { Download, TrendingUp, Award } from "lucide-react";
 
 interface TransparencyReportsProps {
@@ -23,9 +24,9 @@ interface TransparencyReportsProps {
 // Mock data for previous reports grouped by year - in real implementation, this would come from API/CMS
 const mockReportsByYear = {
   "2025": [
-    { month: "January", date: "2025-01" },
+    { month: "March", date: "2025-03" },
     { month: "February", date: "2025-02" },
-    { month: "March", date: "2025-03" }
+    { month: "January", date: "2025-01" }
   ],
   "2024": [
     { month: "December", date: "2024-12" },
@@ -40,20 +41,6 @@ const mockReportsByYear = {
     { month: "March", date: "2024-03" },
     { month: "February", date: "2024-02" },
     { month: "January", date: "2024-01" }
-  ],
-  "2023": [
-    { month: "December", date: "2023-12" },
-    { month: "November", date: "2023-11" },
-    { month: "October", date: "2023-10" },
-    { month: "September", date: "2023-09" },
-    { month: "August", date: "2023-08" },
-    { month: "July", date: "2023-07" },
-    { month: "June", date: "2023-06" },
-    { month: "May", date: "2023-05" },
-    { month: "April", date: "2023-04" },
-    { month: "March", date: "2023-03" },
-    { month: "February", date: "2023-02" },
-    { month: "January", date: "2023-01" }
   ]
 };
 
@@ -110,14 +97,6 @@ export const TransparencyReports = ({
               </CardContent>
             </Card>
 
-            {/* FRND Statement */}
-            <Card className="border border-border bg-card">
-              <CardContent className="p-8">
-                <p className="text-muted-foreground leading-relaxed">
-                  {statement}
-                </p>
-              </CardContent>
-            </Card>
 
             {/* Latest Report */}
             <Card className="border border-border bg-card">
@@ -132,31 +111,49 @@ export const TransparencyReports = ({
                   {latestReport.text}
                 </p>
                 <div className="flex items-center justify-center">
-                  <div className="relative w-32 h-32">
-                    {/* Simple donut chart representation */}
-                    <svg className="w-32 h-32 transform rotate-0" viewBox="0 0 36 36">
-                      <path
-                        d="M18 2.0845
-                          a 15.9155 15.9155 0 0 1 0 31.831
-                          a 15.9155 15.9155 0 0 1 0 -31.831"
-                        fill="none"
-                        stroke="#e5e7eb"
-                        strokeWidth="3"
-                      />
-                      <path
-                        d="M18 2.0845
-                          a 15.9155 15.9155 0 0 1 0 31.831
-                          a 15.9155 15.9155 0 0 1 0 -31.831"
-                        fill="none"
-                        stroke="hsl(var(--safety-green))"
-                        strokeWidth="3"
-                        strokeDasharray="95.29, 100"
-                      />
-                    </svg>
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <span className="text-2xl font-bold text-safety-green">95.29%</span>
+                  <TooltipProvider>
+                    <div className="relative w-32 h-32">
+                      {/* Simple donut chart representation */}
+                      <svg className="w-32 h-32 transform rotate-0" viewBox="0 0 36 36">
+                        <Tooltip>
+                          <TooltipTrigger asChild>
+                            <path
+                              d="M18 2.0845
+                                a 15.9155 15.9155 0 0 1 0 31.831
+                                a 15.9155 15.9155 0 0 1 0 -31.831"
+                              fill="none"
+                              stroke="#e5e7eb"
+                              strokeWidth="3"
+                              className="cursor-pointer"
+                            />
+                          </TooltipTrigger>
+                          <TooltipContent>
+                            <p>4.71%</p>
+                          </TooltipContent>
+                        </Tooltip>
+                        <Tooltip>
+                          <TooltipTrigger asChild>
+                            <path
+                              d="M18 2.0845
+                                a 15.9155 15.9155 0 0 1 0 31.831
+                                a 15.9155 15.9155 0 0 1 0 -31.831"
+                              fill="none"
+                              stroke="hsl(var(--safety-green))"
+                              strokeWidth="3"
+                              strokeDasharray="95.29, 100"
+                              className="cursor-pointer"
+                            />
+                          </TooltipTrigger>
+                          <TooltipContent>
+                            <p>95.29%</p>
+                          </TooltipContent>
+                        </Tooltip>
+                      </svg>
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <span className="text-2xl font-bold text-safety-green">95.29%</span>
+                      </div>
                     </div>
-                  </div>
+                  </TooltipProvider>
                 </div>
               </CardContent>
             </Card>
