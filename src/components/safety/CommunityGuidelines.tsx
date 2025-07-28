@@ -28,9 +28,9 @@ export const CommunityGuidelines = ({ title, intro, allowed, banner }: Community
           
           <div className="mb-8">
             <h3 className="text-xl font-semibold text-foreground mb-4">{intro}</h3>
-            <div className="grid gap-4 sm:grid-cols-2">
+            <div className="grid gap-4 sm:grid-cols-2 sm:grid-rows-[repeat(auto-fit,minmax(0,1fr))]">
               {allowed.map((item, index) => (
-                <div key={index} className="flex items-center gap-3 rounded-lg bg-background p-4 border">
+                <div key={index} className="flex items-center gap-3 rounded-lg bg-background p-4 border h-full min-h-[4rem]">
                   <CheckCircle className="h-5 w-5 text-success flex-shrink-0" />
                   <span className="text-foreground">{item}</span>
                 </div>
