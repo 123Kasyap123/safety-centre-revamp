@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Instagram, Linkedin } from "lucide-react";
-import frndLogo from "@/assets/frnd-logo-4x.webp";
+import frndLogo from "@/assets/frnd-cursive-logo.png";
 
 
 const Footer = () => {

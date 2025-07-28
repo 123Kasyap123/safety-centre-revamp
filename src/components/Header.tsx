@@ -3,7 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
-import frndLogo from '@/assets/frnd-logo-4x.webp';
+import frndLogo from '@/assets/frnd-cursive-logo.png';
 
 
 const Header = () => {
