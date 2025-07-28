@@ -3,16 +3,12 @@ import { Instagram, Linkedin } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="bg-slate-900 text-white">
+    <footer className="bg-slate-800 text-white">
       <div className="container mx-auto px-6 py-12">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
           {/* Logo Section */}
           <div className="flex justify-start">
-            <img 
-              src="/src/assets/frnd-logo.webp" 
-              alt="FRND" 
-              className="h-12"
-            />
+            <div className="text-white font-bold text-2xl italic">frnd</div>
           </div>
 
           {/* Navigation Links */}
@@ -66,14 +62,7 @@ const Footer = () => {
           {/* Contact Information */}
           <div className="flex justify-end">
             <div className="text-right space-y-2">
-              <div className="space-y-1">
-                <p className="text-white text-sm lg:text-base">careers@frnd.app</p>
-                <p className="text-white text-sm lg:text-base">
-                  HR - <span className="underline">Tanisha Gagneja</span>
-                </p>
-              </div>
-              
-              <div className="flex justify-end gap-3 mt-4">
+              <div className="flex justify-end gap-3 mb-4">
                 <a 
                   href="https://instagram.com/frndapp" 
                   target="_blank" 
@@ -92,7 +81,7 @@ const Footer = () => {
                 </a>
               </div>
               
-              <div className="text-white text-xs lg:text-sm mt-4 leading-relaxed">
+              <div className="text-white text-xs lg:text-sm leading-relaxed">
                 <p>Urban Vault No. 1350,</p>
                 <p>19th Main, 17th Cross Road,</p>
                 <p>HSR Layout 1st sector opposite,</p>
