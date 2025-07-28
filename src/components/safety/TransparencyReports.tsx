@@ -125,38 +125,42 @@ export const TransparencyReports = ({
                   <TooltipProvider>
                     <div className="relative w-32 h-32">
                       {/* Simple donut chart representation */}
-                      <svg className="w-32 h-32 transform rotate-0" viewBox="0 0 36 36">
+                      <svg className="w-32 h-32 transform -rotate-90" viewBox="0 0 36 36">
+                        {/* Background circle (gray part - non-compliant) */}
                         <Tooltip>
                           <TooltipTrigger asChild>
-                            <path
-                              d="M18 2.0845
-                                a 15.9155 15.9155 0 0 1 0 31.831
-                                a 15.9155 15.9155 0 0 1 0 -31.831"
+                            <circle
+                              cx="18"
+                              cy="18"
+                              r="15.9155"
                               fill="none"
                               stroke="#e5e7eb"
                               strokeWidth="3"
-                              className="cursor-pointer"
+                              className="cursor-pointer hover:stroke-gray-400 transition-colors"
                             />
                           </TooltipTrigger>
                           <TooltipContent>
-                            <p>4.71%</p>
+                            <p>Non-compliant: 4.71%</p>
                           </TooltipContent>
                         </Tooltip>
+                        
+                        {/* Green circle (compliant part) */}
                         <Tooltip>
                           <TooltipTrigger asChild>
-                            <path
-                              d="M18 2.0845
-                                a 15.9155 15.9155 0 0 1 0 31.831
-                                a 15.9155 15.9155 0 0 1 0 -31.831"
+                            <circle
+                              cx="18"
+                              cy="18"
+                              r="15.9155"
                               fill="none"
                               stroke="hsl(var(--safety-green))"
                               strokeWidth="3"
-                              strokeDasharray="95.29, 100"
-                              className="cursor-pointer"
+                              strokeDasharray="95.29 4.71"
+                              strokeDashoffset="0"
+                              className="cursor-pointer hover:opacity-80 transition-opacity"
                             />
                           </TooltipTrigger>
                           <TooltipContent>
-                            <p>95.29%</p>
+                            <p>Compliant: 95.29%</p>
                           </TooltipContent>
                         </Tooltip>
                       </svg>
