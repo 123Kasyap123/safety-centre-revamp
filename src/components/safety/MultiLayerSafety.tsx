@@ -40,8 +40,8 @@ export const MultiLayerSafety = ({ title, subtitle, layers }: MultiLayerSafetyPr
             
             return (
               <Card key={index} className="border border-border bg-card hover:bg-card-hover transition-colors">
-                <CardContent className="p-6">
-                  <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-safety-green/10">
+                <CardContent className="p-6 text-center">
+                  <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-safety-green/10 mx-auto">
                     <IconComponent className="h-6 w-6 text-safety-green" />
                   </div>
                   
