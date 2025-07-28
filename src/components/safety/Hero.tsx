@@ -15,11 +15,6 @@ export const Hero = ({ title, subtitle, primaryCta, secondaryCta, onPrimaryCta, 
     <section className="py-20 bg-frnd-red">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-4xl text-center">
-          {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 mb-8 bg-white/10 border border-white/20 rounded-full">
-            <Shield className="h-4 w-4 text-white" />
-            <span className="text-sm font-medium text-white">FRND Safety Centre</span>
-          </div>
           
           {/* Main heading */}
           <h1 className="text-4xl font-bold tracking-tight text-frnd-red-foreground mb-6 sm:text-5xl lg:text-6xl">
