@@ -32,11 +32,7 @@
       {
         "icon": "users",
         "title": "User Tools",
-        "description": "Block, remove, kick-out features with fast reporting and our 24-hour action commitment.",
-        "subItems": [
-          "Report: We commit to act within 24 hours.",
-          "Helpline: {{helpline_number}} (Available {{helpline_hours}})"
-        ]
+        "description": "Block, remove, kick-out features with fast reporting and our 24-hour action commitment."
       }
     ]
   },
@@ -45,23 +41,14 @@
     "intro": "The following is allowed:",
     "allowed": [
       "Friendly, respectful conversations",
-      "Conversations that do not violate personal boundaries"
+      "Conversations that do not violate personal boundaries",
+      "Conversations about any topic"
     ],
     "banner": {
       "text": "Certain behaviours—explicit content, harassment, personal-data requests and spam—are strictly banned.",
       "linkText": "View full policy",
       "linkUrl": "/safety/guidelines"
     },
-    "notAllowed": {
-      "title": "Key things NOT allowed",
-      "items": [
-        "Explicit or inappropriate content",
-        "Harassment or bullying behavior",
-        "Sharing personal information without consent",
-        "Spam or promotional content",
-        "Impersonation or fake profiles"
-      ]
-    }
   },
   "transparency": {
     "title": "Transparency Reports",
@@ -86,29 +73,25 @@
         "title": "Chief Compliance Officer",
         "name": "{{cco_name}}",
         "email": "{{cco_email}}",
-        "address": "{{cco_address}}",
-        "sla": "Response within 48 hours"
+        "sla": "{{cco_sla}}"
       },
       {
         "title": "Grievance Officer",
         "name": "{{grievance_officer_name}}",
         "email": "{{grievance_officer_email}}",
-        "address": "{{grievance_officer_address}}",
-        "sla": "Response within 24 hours"
+        "sla": "{{grievance_officer_sla}}"
       },
       {
         "title": "Nodal Officer",
         "name": "{{nodal_officer_name}}",
         "email": "{{nodal_officer_email}}",
-        "address": "{{nodal_officer_address}}",
-        "sla": "Response within 24 hours"
+        "sla": "{{nodal_officer_sla}}"
       },
       {
-        "title": "HR",
-        "name": "{{hr_name}}",
-        "email": "{{hr_email}}",
-        "address": "{{hr_address}}",
-        "sla": "Response within 72 hours"
+        "title": "Careers",
+        "name": "{{careers_name}}",
+        "email": "{{careers_email}}",
+        "sla": "{{careers_sla}}"
       }
     ]
   },
@@ -178,17 +161,17 @@
     "latest_month": "December",
     "latest_year": "2024",
     "latest_compliance_percent": "95.29",
-    "cco_name": "Dr. Jane Smith",
-    "cco_email": "compliance@frnd.app",
-    "cco_address": "FRND Inc., 123 Safety Street, Tech City, TC 12345",
-    "grievance_officer_name": "Mr. John Doe",
-    "grievance_officer_email": "grievance@frnd.app", 
-    "grievance_officer_address": "FRND Inc., 123 Safety Street, Tech City, TC 12345",
-    "nodal_officer_name": "Ms. Sarah Johnson",
-    "nodal_officer_email": "nodal@frnd.app",
-    "nodal_officer_address": "FRND Inc., 123 Safety Street, Tech City, TC 12345",
-    "hr_name": "Ms. Emily Brown",
-    "hr_email": "hr@frnd.app",
-    "hr_address": "FRND Inc., 123 Safety Street, Tech City, TC 12345"
+    "cco_name": "B.P.S. Tanwar",
+    "cco_email": "chief.compliance.officer@frnd.app",
+    "cco_sla": "Working hours 11:30 AM to 2PM",
+    "grievance_officer_name": "S. Surana",
+    "grievance_officer_email": "grievance.officer@frnd.app",
+    "grievance_officer_sla": "Working hours 11:30 AM to 2PM",
+    "nodal_officer_name": "S. Surana",
+    "nodal_officer_email": "nodal.officer@frnd.app",
+    "nodal_officer_sla": "Working hours 11:30 AM to 2PM",
+    "careers_name": "T. Gagneja",
+    "careers_email": "careers@frnd.app",
+    "careers_sla": "11:30AM - 2PM"
   }
 }

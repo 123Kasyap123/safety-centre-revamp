@@ -68,7 +68,7 @@ export const TransparencyReports = ({
               <CardContent className="p-8">
                 <div className="flex items-start gap-4">
                   <div className="p-3 bg-safety-green/10 rounded-lg">
-                    <TrendingUp className="h-8 w-8 text-safety-green" />
+                    <Award className="h-8 w-8 text-safety-green" />
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold text-foreground mb-2">
@@ -106,7 +106,7 @@ export const TransparencyReports = ({
                 <div className="flex items-center justify-center">
                   <div className="relative w-32 h-32">
                     {/* Simple donut chart representation */}
-                    <svg className="w-32 h-32 transform -rotate-90" viewBox="0 0 36 36">
+                    <svg className="w-32 h-32 transform rotate-0" viewBox="0 0 36 36">
                       <path
                         d="M18 2.0845
                           a 15.9155 15.9155 0 0 1 0 31.831

@@ -121,7 +121,6 @@ const Safety = () => {
         intro={processedContent.communityGuidelines.intro}
         allowed={processedContent.communityGuidelines.allowed}
         banner={processedContent.communityGuidelines.banner}
-        notAllowed={processedContent.communityGuidelines.notAllowed}
       />
 
       <TransparencyReports
