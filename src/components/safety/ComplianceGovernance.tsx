@@ -27,7 +27,7 @@ export const ComplianceGovernance = ({ title, subtitle, officers }: ComplianceGo
               {title}
             </h2>
             <p className="text-lg text-muted-foreground">
-              {subtitle}
+              Official Points of Contact for Compliance and Grievance Redressal
             </p>
           </div>
           
