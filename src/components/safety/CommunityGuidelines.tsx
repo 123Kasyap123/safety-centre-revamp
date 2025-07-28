@@ -1,7 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import { Button } from "@/components/ui/button";
-import { CheckCircle, AlertTriangle, ChevronDown, ExternalLink } from "lucide-react";
+import { CheckCircle, AlertTriangle, ChevronDown } from "lucide-react";
 import { useState } from "react";
 
 interface CommunityGuidelinesProps {
@@ -45,10 +45,9 @@ export const CommunityGuidelines = ({ title, intro, allowed, banner }: Community
                 <div className="flex-1">
                   <span className="text-muted-foreground text-sm">
                     {banner.text}
-                    <Button variant="outline" size="sm" asChild className="group inline-flex ml-2">
-                      <a href={banner.linkUrl} className="inline-flex items-center">
+                    <Button variant="outline" size="sm" asChild className="inline-flex ml-2 text-xs px-2 py-1">
+                      <a href={banner.linkUrl}>
                         {banner.linkText}
-                        <ExternalLink className="ml-2 h-3 w-3 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                       </a>
                     </Button>
                   </span>
