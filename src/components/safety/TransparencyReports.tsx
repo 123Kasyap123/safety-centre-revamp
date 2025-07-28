@@ -90,7 +90,18 @@ export const TransparencyReports = ({
                       Independent Study Results
                     </h3>
                     <p className="text-card-foreground text-lg leading-relaxed">
-                      {alvarezStudy.text}
+                      {alvarezStudy.text.replace(/(\d+%)/g, '<strong>$1</strong>').split('<strong>').map((part, index) => {
+                        if (part.includes('</strong>')) {
+                          const [boldText, ...rest] = part.split('</strong>');
+                          return (
+                            <span key={index}>
+                              <strong>{boldText}</strong>
+                              {rest.join('</strong>')}
+                            </span>
+                          );
+                        }
+                        return part;
+                      })}
                     </p>
                   </div>
                 </div>
