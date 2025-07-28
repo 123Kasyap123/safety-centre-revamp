@@ -55,8 +55,11 @@ const Safety = () => {
     if (officer.title === "Nodal Officer") {
       return { ...officer, note: safetyContent.config.nodal_officer_note };
     }
-    if (officer.title === "Careers") {
-      return { ...officer, note: safetyContent.config.careers_note };
+    if (officer.title === "Grievance Officer") {
+      return { ...officer, note: safetyContent.config.grievance_officer_note };
+    }
+    if (officer.title === "Chief Compliance Officer") {
+      return { ...officer, note: safetyContent.config.cco_note };
     }
     return officer;
   });
