@@ -122,7 +122,7 @@ export const TransparencyReports = ({
                   {latestReport.text}
                 </p>
                 <div className="flex items-center justify-center">
-                  <TooltipProvider delayDuration={100}>
+                  <TooltipProvider delayDuration={0}>
                     <div className="relative w-32 h-32">
                       {/* Simple donut chart representation */}
                       <svg className="w-32 h-32 transform -rotate-90" viewBox="0 0 36 36">
@@ -148,8 +148,7 @@ export const TransparencyReports = ({
                           strokeDashoffset="0"
                         />
                         
-                        {/* Invisible hover areas for better tooltip detection */}
-                        {/* Green part hover area */}
+                        {/* Green part hover area with tooltip */}
                         <Tooltip>
                           <TooltipTrigger asChild>
                             <circle
@@ -162,15 +161,19 @@ export const TransparencyReports = ({
                               strokeDasharray="95.29 4.71"
                               strokeDashoffset="0"
                               className="cursor-pointer"
-                              style={{ pointerEvents: 'stroke' }}
+                              onMouseEnter={() => console.log('Hovering green part')}
                             />
                           </TooltipTrigger>
-                          <TooltipContent side="top" className="bg-popover border border-border">
-                            <p className="text-sm font-medium">Compliant: 95.29%</p>
+                          <TooltipContent 
+                            side="top" 
+                            className="z-50 bg-popover border border-border shadow-lg"
+                            sideOffset={10}
+                          >
+                            <p className="text-sm font-medium text-popover-foreground">Compliant: 95.29%</p>
                           </TooltipContent>
                         </Tooltip>
                         
-                        {/* Gray part hover area */}
+                        {/* Gray part hover area with tooltip */}
                         <Tooltip>
                           <TooltipTrigger asChild>
                             <circle
@@ -183,11 +186,15 @@ export const TransparencyReports = ({
                               strokeDasharray="4.71 95.29"
                               strokeDashoffset="-95.29"
                               className="cursor-pointer"
-                              style={{ pointerEvents: 'stroke' }}
+                              onMouseEnter={() => console.log('Hovering gray part')}
                             />
                           </TooltipTrigger>
-                          <TooltipContent side="top" className="bg-popover border border-border">
-                            <p className="text-sm font-medium">Non-compliant: 4.71%</p>
+                          <TooltipContent 
+                            side="top" 
+                            className="z-50 bg-popover border border-border shadow-lg"
+                            sideOffset={10}
+                          >
+                            <p className="text-sm font-medium text-popover-foreground">Non-compliant: 4.71%</p>
                           </TooltipContent>
                         </Tooltip>
                       </svg>
