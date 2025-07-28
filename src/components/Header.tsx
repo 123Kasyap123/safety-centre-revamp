@@ -11,9 +11,12 @@ const Header = () => {
 
   const navigation = [
     { name: 'Home', href: '/' },
-    { name: 'Safety Centre', href: '/safety' },
-    { name: 'About', href: '#' },
-    { name: 'Support', href: '#' },
+    { name: 'Safety Center', href: '/safety' },
+    { name: 'APM Program', href: '#' },
+    { name: 'Become Star Trainer', href: '#' },
+    { name: 'Become a Game Show Host', href: '#' },
+    { name: 'Become a FRND Celeb', href: '#' },
+    { name: 'Loveskool Profile Form', href: '#' },
   ];
 
   const isActive = (href: string) => {
@@ -53,10 +56,10 @@ const Header = () => {
         {/* Right side actions */}
         <div className="flex flex-1 items-center justify-end space-x-4">
           <Button variant="ghost" size="sm" className="hidden md:inline-flex">
-            Sign In
+            Language
           </Button>
-          <Button size="sm" className="hidden md:inline-flex">
-            Get Started
+          <Button size="sm" className="hidden md:inline-flex bg-green-600 hover:bg-green-700">
+            Login
           </Button>
 
           {/* Mobile menu */}
@@ -96,10 +99,10 @@ const Header = () => {
                 ))}
                 <div className="pt-4 space-y-2">
                   <Button variant="ghost" className="w-full justify-start">
-                    Sign In
+                    Language
                   </Button>
-                  <Button className="w-full justify-start">
-                    Get Started
+                  <Button className="w-full justify-start bg-green-600 hover:bg-green-700">
+                    Login
                   </Button>
                 </div>
               </nav>
