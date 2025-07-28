@@ -65,12 +65,6 @@
     "subtitle": "Meet our dedicated team ensuring FRND remains a safe and compliant platform.",
     "officers": [
       {
-        "title": "Chief Compliance Officer",
-        "name": "{{cco_name}}",
-        "email": "{{cco_email}}",
-        "sla": "{{cco_sla}}"
-      },
-      {
         "title": "Grievance Officer",
         "name": "{{grievance_officer_name}}",
         "email": "{{grievance_officer_email}}",
@@ -83,10 +77,10 @@
         "sla": "{{nodal_officer_sla}}"
       },
       {
-        "title": "Careers",
-        "name": "{{careers_name}}",
-        "email": "{{careers_email}}",
-        "sla": "{{careers_sla}}"
+        "title": "Chief Compliance Officer",
+        "name": "{{cco_name}}",
+        "email": "{{cco_email}}",
+        "sla": "{{cco_sla}}"
       }
     ]
   },
@@ -169,6 +163,7 @@
     "careers_email": "careers@frnd.app",
     "careers_sla": "Working hours 11:30AM - 2PM",
     "nodal_officer_note": "This email is solely for use by police and investigating agencies",
-    "careers_note": "This email is solely for career related queries and information"
+    "grievance_officer_note": "This email is for user related grievances and queries",
+    "cco_note": "For purposes of internal compliance only"
   }
 }
