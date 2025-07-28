@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Instagram, Linkedin } from "lucide-react";
-import frndLogo from "@/assets/frnd-logo.webp";
+
 
 const Footer = () => {
   return (
@@ -9,11 +9,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           {/* Logo Section */}
           <div className="lg:col-span-2 flex justify-start">
-            <img 
-              src={frndLogo} 
-              alt="FRND" 
-              className="h-12 w-auto"
-            />
+            <span className="text-white font-bold text-2xl italic">frnd</span>
           </div>
 
           {/* Navigation Links - Centered */}
