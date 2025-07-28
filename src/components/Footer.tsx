@@ -13,7 +13,10 @@ const Footer = () => {
             <img 
               src={frndLogo} 
               alt="FRND" 
-              className="h-12 w-auto brightness-0 invert"
+              className="h-12 w-auto"
+              style={{ 
+                filter: 'brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%)'
+              }}
             />
           </div>
 
