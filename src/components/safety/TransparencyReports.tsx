@@ -2,8 +2,8 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { Download, TrendingUp, Award } from "lucide-react";
+import { useState } from "react";
 
 interface TransparencyReportsProps {
   title: string;
@@ -52,6 +52,26 @@ export const TransparencyReports = ({
   latestReport, 
   previousReports 
 }: TransparencyReportsProps) => {
+  const [tooltip, setTooltip] = useState<{ show: boolean; content: string; x: number; y: number }>({
+    show: false,
+    content: '',
+    x: 0,
+    y: 0
+  });
+  const handleMouseMove = (e: React.MouseEvent, content: string) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    setTooltip({
+      show: true,
+      content,
+      x: e.clientX - rect.left,
+      y: e.clientY - rect.top - 40
+    });
+  };
+
+  const handleMouseLeave = () => {
+    setTooltip({ show: false, content: '', x: 0, y: 0 });
+  };
+
   const handleDownload = (reportDate: string) => {
     // Analytics tracking
     if (typeof window !== 'undefined' && (window as any).gtag) {
@@ -122,87 +142,81 @@ export const TransparencyReports = ({
                   {latestReport.text}
                 </p>
                 <div className="flex items-center justify-center">
-                  <TooltipProvider delayDuration={0}>
-                    <div className="relative w-32 h-32">
-                      {/* Simple donut chart representation */}
-                      <svg className="w-32 h-32 transform -rotate-90" viewBox="0 0 36 36">
-                        {/* Background circle (gray part - non-compliant) - Full circle */}
-                        <circle
-                          cx="18"
-                          cy="18"
-                          r="15.9155"
-                          fill="none"
-                          stroke="#e5e7eb"
-                          strokeWidth="3"
-                        />
-                        
-                        {/* Green circle (compliant part) - Partial circle */}
-                        <circle
-                          cx="18"
-                          cy="18"
-                          r="15.9155"
-                          fill="none"
-                          stroke="hsl(var(--safety-green))"
-                          strokeWidth="3"
-                          strokeDasharray="95.29 4.71"
-                          strokeDashoffset="0"
-                        />
-                        
-                        {/* Green part hover area with tooltip */}
-                        <Tooltip>
-                          <TooltipTrigger asChild>
-                            <circle
-                              cx="18"
-                              cy="18"
-                              r="15.9155"
-                              fill="none"
-                              stroke="transparent"
-                              strokeWidth="8"
-                              strokeDasharray="95.29 4.71"
-                              strokeDashoffset="0"
-                              className="cursor-pointer"
-                              onMouseEnter={() => console.log('Hovering green part')}
-                            />
-                          </TooltipTrigger>
-                          <TooltipContent 
-                            side="top" 
-                            className="z-50 bg-popover border border-border shadow-lg"
-                            sideOffset={10}
-                          >
-                            <p className="text-sm font-medium text-popover-foreground">Compliant: 95.29%</p>
-                          </TooltipContent>
-                        </Tooltip>
-                        
-                        {/* Gray part hover area with tooltip */}
-                        <Tooltip>
-                          <TooltipTrigger asChild>
-                            <circle
-                              cx="18"
-                              cy="18"
-                              r="15.9155"
-                              fill="none"
-                              stroke="transparent"
-                              strokeWidth="8"
-                              strokeDasharray="4.71 95.29"
-                              strokeDashoffset="-95.29"
-                              className="cursor-pointer"
-                              onMouseEnter={() => console.log('Hovering gray part')}
-                            />
-                          </TooltipTrigger>
-                          <TooltipContent 
-                            side="top" 
-                            className="z-50 bg-popover border border-border shadow-lg"
-                            sideOffset={10}
-                          >
-                            <p className="text-sm font-medium text-popover-foreground">Non-compliant: 4.71%</p>
-                          </TooltipContent>
-                        </Tooltip>
-                      </svg>
-                      <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                        <span className="text-2xl font-bold text-safety-green">95.29%</span>
-                      </div>
+                  <div className="relative w-32 h-32">
+                    {/* Simple donut chart representation */}
+                    <svg className="w-32 h-32 transform -rotate-90" viewBox="0 0 36 36">
+                      {/* Background circle (gray part - non-compliant) - Full circle */}
+                      <circle
+                        cx="18"
+                        cy="18"
+                        r="15.9155"
+                        fill="none"
+                        stroke="#e5e7eb"
+                        strokeWidth="3"
+                      />
+                      
+                      {/* Green circle (compliant part) - Partial circle */}
+                      <circle
+                        cx="18"
+                        cy="18"
+                        r="15.9155"
+                        fill="none"
+                        stroke="hsl(var(--safety-green))"
+                        strokeWidth="3"
+                        strokeDasharray="95.29 4.71"
+                        strokeDashoffset="0"
+                      />
+                      
+                      {/* Green part hover area */}
+                      <circle
+                        cx="18"
+                        cy="18"
+                        r="15.9155"
+                        fill="none"
+                        stroke="transparent"
+                        strokeWidth="8"
+                        strokeDasharray="95.29 4.71"
+                        strokeDashoffset="0"
+                        className="cursor-pointer"
+                        onMouseMove={(e) => handleMouseMove(e, "Compliant: 95.29%")}
+                        onMouseLeave={handleMouseLeave}
+                      />
+                      
+                      {/* Gray part hover area */}
+                      <circle
+                        cx="18"
+                        cy="18"
+                        r="15.9155"
+                        fill="none"
+                        stroke="transparent"
+                        strokeWidth="8"
+                        strokeDasharray="4.71 95.29"
+                        strokeDashoffset="-95.29"
+                        className="cursor-pointer"
+                        onMouseMove={(e) => handleMouseMove(e, "Non-compliant: 4.71%")}
+                        onMouseLeave={handleMouseLeave}
+                      />
+                    </svg>
+                    
+                    {/* Center text */}
+                    <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                      <span className="text-2xl font-bold text-safety-green">95.29%</span>
                     </div>
-                  </TooltipProvider>
+                    
+                    {/* Custom tooltip */}
+                    {tooltip.show && (
+                      <div 
+                        className="absolute z-50 bg-popover border border-border rounded-md px-3 py-1.5 text-sm text-popover-foreground shadow-lg pointer-events-none"
+                        style={{
+                          left: tooltip.x,
+                          top: tooltip.y,
+                          transform: 'translateX(-50%)'
+                        }}
+                      >
+                        {tooltip.content}
+                      </div>
+                    )}
+                  </div>
                 </div>
               </CardContent>
             </Card>
