@@ -1,19 +1,24 @@
 import { Link } from "react-router-dom";
 import { Instagram, Linkedin } from "lucide-react";
+import frndLogo from "@/assets/frnd-logo.webp";
 
 const Footer = () => {
   return (
-    <footer className="bg-slate-800 text-white">
+    <footer className="bg-black text-white">
       <div className="container mx-auto px-6 py-12">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           {/* Logo Section */}
-          <div className="flex justify-start">
-            <div className="text-white font-bold text-2xl italic">frnd</div>
+          <div className="lg:col-span-2 flex justify-start">
+            <img 
+              src={frndLogo} 
+              alt="FRND" 
+              className="h-12 w-auto"
+            />
           </div>
 
-          {/* Navigation Links */}
-          <div className="flex justify-center">
-            <nav className="flex flex-wrap gap-6 lg:gap-8 justify-center">
+          {/* Navigation Links - Centered */}
+          <div className="lg:col-span-8 flex justify-center">
+            <nav className="flex flex-wrap gap-6 lg:gap-8 justify-center items-center">
               <Link 
                 to="/" 
                 className="text-white hover:text-gray-300 transition-colors text-sm lg:text-base"
@@ -59,25 +64,25 @@ const Footer = () => {
             </nav>
           </div>
 
-          {/* Contact Information */}
-          <div className="flex justify-end">
-            <div className="text-right space-y-2">
-              <div className="flex justify-end gap-3 mb-4">
+          {/* Social Icons and Address */}
+          <div className="lg:col-span-2 flex justify-end">
+            <div className="text-right space-y-4">
+              <div className="flex justify-end gap-3">
                 <a 
                   href="https://instagram.com/frndapp" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="text-white hover:text-gray-300 transition-colors"
+                  className="bg-gradient-to-r from-purple-500 to-pink-500 text-white p-2 rounded-lg hover:opacity-80 transition-opacity"
                 >
-                  <Instagram size={20} />
+                  <Instagram size={16} />
                 </a>
                 <a 
                   href="https://linkedin.com/company/frndapp" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="text-white hover:text-gray-300 transition-colors"
+                  className="bg-blue-600 text-white p-2 rounded-lg hover:opacity-80 transition-opacity"
                 >
-                  <Linkedin size={20} />
+                  <Linkedin size={16} />
                 </a>
               </div>
               
