@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import frndLogo from '@/assets/frnd-logo-cloudfront.webp';
 
 
 const Header = () => {
@@ -29,7 +30,11 @@ const Header = () => {
       <div className="container flex h-16 items-center">
         {/* Logo */}
         <Link to="/" className="mr-6 flex items-center space-x-2">
-          <span className="text-black font-bold text-2xl italic">frnd</span>
+          <img
+            src={frndLogo}
+            alt="FRND"
+            className="h-8 w-auto"
+          />
         </Link>
 
         {/* Desktop Navigation */}
@@ -73,7 +78,11 @@ const Header = () => {
             <SheetContent side="right" className="w-[300px] sm:w-[400px]">
               <nav className="flex flex-col space-y-4">
                 <Link to="/" className="flex items-center space-x-2 mb-6">
-                  <span className="text-black font-bold text-2xl italic">frnd</span>
+                  <img
+                    src={frndLogo}
+                    alt="FRND"
+                    className="h-8 w-auto"
+                  />
                 </Link>
                 {navigation.map((item) => (
                   <Link
