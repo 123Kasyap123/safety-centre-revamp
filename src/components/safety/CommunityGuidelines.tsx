@@ -40,11 +40,11 @@ export const CommunityGuidelines = ({ title, intro, allowed, banner }: Community
           
           <Card className="mb-8 border-warning/20 bg-warning/5">
             <CardContent className="p-4">
-                <div className="flex items-start gap-2">
-                <AlertTriangle className="h-4 w-4 text-warning flex-shrink-0 mt-0.5" />
+              <div className="flex items-center gap-2">
+                <AlertTriangle className="h-4 w-4 text-warning flex-shrink-0" />
                 <div className="flex-1">
-                  <p className="text-muted-foreground text-sm inline">{banner.text} </p>
-                  <Button variant="outline" size="sm" asChild className="group inline-flex ml-2">
+                  <span className="text-muted-foreground text-sm">{banner.text} </span>
+                  <Button variant="outline" size="sm" asChild className="group inline-flex">
                     <a href={banner.linkUrl} className="inline-flex items-center">
                       {banner.linkText}
                       <ExternalLink className="ml-2 h-3 w-3 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
