@@ -18,7 +18,7 @@ export const Hero = ({ title, subtitle, primaryCta, secondaryCta, onPrimaryCta, 
           
           {/* Main heading */}
           <h1 className="text-4xl font-bold tracking-tight text-frnd-red-foreground mb-6 sm:text-5xl lg:text-6xl">
-            {title}
+            Safety, Compliance, Trust
           </h1>
           
           {/* Subtitle */}
