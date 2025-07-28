@@ -110,6 +110,11 @@ const Safety = () => {
         onSecondaryCta={scrollToTransparency}
       />
 
+      <MultiLayerSafety
+        title={processedContent.multiLayerSafety.title}
+        subtitle={processedContent.multiLayerSafety.subtitle}
+        layers={processedContent.multiLayerSafety.layers.filter((layer: any) => layer.title !== "100% Coverage in Video Calls")}
+      />
 
       <CommunityGuidelines
         title={processedContent.communityGuidelines.title}
