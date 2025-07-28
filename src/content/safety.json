@@ -172,6 +172,8 @@
     "nodal_officer_sla": "Working hours 11:30 AM to 2PM",
     "careers_name": "T. Gagneja",
     "careers_email": "careers@frnd.app",
-    "careers_sla": "11:30AM - 2PM"
+    "careers_sla": "Working hours 11:30AM - 2PM",
+    "nodal_officer_note": "This email is solely for use by police and investigating agencies",
+    "careers_note": "This email is solely for career related queries and information"
   }
 }

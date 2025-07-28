@@ -49,6 +49,17 @@ const Safety = () => {
   };
 
   const processedContent = processContent(safetyContent, safetyContent.config);
+  
+  // Add notes to specific officers
+  processedContent.compliance.officers = processedContent.compliance.officers.map((officer: any) => {
+    if (officer.title === "Nodal Officer") {
+      return { ...officer, note: safetyContent.config.nodal_officer_note };
+    }
+    if (officer.title === "Careers") {
+      return { ...officer, note: safetyContent.config.careers_note };
+    }
+    return officer;
+  });
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);

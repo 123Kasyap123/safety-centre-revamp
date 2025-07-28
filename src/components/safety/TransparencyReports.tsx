@@ -20,14 +20,42 @@ interface TransparencyReportsProps {
   };
 }
 
-// Mock data for previous reports - in real implementation, this would come from API/CMS
-const mockReports = [
-  { month: "December", year: "2024", compliance: "95.29%", date: "2024-12" },
-  { month: "November", year: "2024", compliance: "94.87%", date: "2024-11" },
-  { month: "October", year: "2024", compliance: "95.12%", date: "2024-10" },
-  { month: "September", year: "2024", compliance: "94.95%", date: "2024-09" },
-  { month: "August", year: "2024", compliance: "95.01%", date: "2024-08" },
-];
+// Mock data for previous reports grouped by year - in real implementation, this would come from API/CMS
+const mockReportsByYear = {
+  "2025": [
+    { month: "January", date: "2025-01" },
+    { month: "February", date: "2025-02" },
+    { month: "March", date: "2025-03" }
+  ],
+  "2024": [
+    { month: "December", date: "2024-12" },
+    { month: "November", date: "2024-11" },
+    { month: "October", date: "2024-10" },
+    { month: "September", date: "2024-09" },
+    { month: "August", date: "2024-08" },
+    { month: "July", date: "2024-07" },
+    { month: "June", date: "2024-06" },
+    { month: "May", date: "2024-05" },
+    { month: "April", date: "2024-04" },
+    { month: "March", date: "2024-03" },
+    { month: "February", date: "2024-02" },
+    { month: "January", date: "2024-01" }
+  ],
+  "2023": [
+    { month: "December", date: "2023-12" },
+    { month: "November", date: "2023-11" },
+    { month: "October", date: "2023-10" },
+    { month: "September", date: "2023-09" },
+    { month: "August", date: "2023-08" },
+    { month: "July", date: "2023-07" },
+    { month: "June", date: "2023-06" },
+    { month: "May", date: "2023-05" },
+    { month: "April", date: "2023-04" },
+    { month: "March", date: "2023-03" },
+    { month: "February", date: "2023-02" },
+    { month: "January", date: "2023-01" }
+  ]
+};
 
 export const TransparencyReports = ({ 
   title, 
@@ -141,40 +169,41 @@ export const TransparencyReports = ({
                 </h3>
                 <p className="text-muted-foreground mb-6">{previousReports.description}</p>
                 
-                <Accordion type="single" collapsible>
-                  <AccordionItem value="previous-reports">
-                    <AccordionTrigger className="hover:no-underline">
-                      View Previous Reports
-                    </AccordionTrigger>
-                    <AccordionContent>
-                      <div className="space-y-4 pt-4">
-                        {mockReports.map((report, index) => (
-                          <div
-                            key={index}
-                            className="flex items-center justify-between p-4 border border-border rounded-lg bg-background"
-                          >
-                            <div>
-                              <h4 className="font-medium text-foreground">
-                                {report.month} {report.year}
-                              </h4>
-                              <p className="text-sm text-muted-foreground">
-                                Compliance: {report.compliance}
-                              </p>
-                            </div>
-                            <Button
-                              variant="outline"
-                              size="sm"
-                              onClick={() => handleDownload(report.date)}
-                              className="border-border hover:bg-card-hover"
+                <Accordion type="single" collapsible defaultValue="2025">
+                  {Object.entries(mockReportsByYear)
+                    .sort(([a], [b]) => parseInt(b) - parseInt(a)) // Sort years in descending order
+                    .map(([year, reports]) => (
+                    <AccordionItem key={year} value={year}>
+                      <AccordionTrigger className="hover:no-underline">
+                        {year} Reports
+                      </AccordionTrigger>
+                      <AccordionContent>
+                        <div className="space-y-4 pt-4">
+                          {reports.map((report, index) => (
+                            <div
+                              key={index}
+                              className="flex items-center justify-between p-4 border border-border rounded-lg bg-background"
                             >
-                              <Download className="h-4 w-4 mr-2" />
-                              Download PDF
-                            </Button>
-                          </div>
-                        ))}
-                      </div>
-                    </AccordionContent>
-                  </AccordionItem>
+                              <div>
+                                <h4 className="font-medium text-foreground">
+                                  {report.month} {year}
+                                </h4>
+                              </div>
+                              <Button
+                                variant="outline"
+                                size="sm"
+                                onClick={() => handleDownload(report.date)}
+                                className="border-border hover:bg-card-hover"
+                              >
+                                <Download className="h-4 w-4 mr-2" />
+                                Download PDF
+                              </Button>
+                            </div>
+                          ))}
+                        </div>
+                      </AccordionContent>
+                    </AccordionItem>
+                  ))}
                 </Accordion>
               </CardContent>
             </Card>

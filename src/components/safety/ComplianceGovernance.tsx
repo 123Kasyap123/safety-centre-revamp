@@ -8,6 +8,7 @@ interface Officer {
   email: string;
   address: string;
   sla: string;
+  note?: string;
 }
 
 interface ComplianceGovernanceProps {
@@ -62,6 +63,14 @@ export const ComplianceGovernance = ({ title, subtitle, officers }: ComplianceGo
                       </Badge>
                     </div>
                   </div>
+                  
+                  {officer.note && (
+                    <div className="mt-4 p-3 bg-muted/50 rounded-lg border-l-4 border-primary/40">
+                      <p className="text-xs text-muted-foreground italic">
+                        {officer.note}
+                      </p>
+                    </div>
+                  )}
                 </CardContent>
               </Card>
             ))}
