@@ -56,13 +56,13 @@ export const MultiLayerSafety = ({ title, subtitle, layers }: MultiLayerSafetyPr
                   {layer.subItems && (
                     <div className="space-y-2">
                       {layer.subItems.map((item, itemIndex) => (
-                        <div key={itemIndex} className="flex items-start gap-2 text-sm">
+                        <div key={itemIndex} className="flex items-center justify-center gap-2 text-sm">
                           {item.includes("Report:") ? (
-                            <AlertCircle className="h-4 w-4 text-warning mt-0.5 flex-shrink-0" />
+                            <AlertCircle className="h-4 w-4 text-warning flex-shrink-0" />
                           ) : (
-                            <Phone className="h-4 w-4 text-safety-green mt-0.5 flex-shrink-0" />
+                            <Phone className="h-4 w-4 text-safety-green flex-shrink-0" />
                           )}
-                          <span className="text-muted-foreground">{item}</span>
+                          <span className="text-muted-foreground text-center">{item}</span>
                         </div>
                       ))}
                     </div>
