@@ -30,6 +30,8 @@ export default {
 				'brand-primary-foreground': 'hsl(var(--brand-primary-foreground))',
 				'brand-secondary': 'hsl(var(--brand-secondary))',
 				'brand-secondary-foreground': 'hsl(var(--brand-secondary-foreground))',
+				'frnd-red': 'hsl(var(--frnd-red))',
+				'frnd-red-foreground': 'hsl(var(--frnd-red-foreground))',
 				
 				// Safety Theme Colors
 				'safety-green': 'hsl(var(--safety-green))',

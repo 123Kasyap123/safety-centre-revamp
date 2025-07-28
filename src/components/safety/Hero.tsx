@@ -12,22 +12,22 @@ interface HeroProps {
 
 export const Hero = ({ title, subtitle, primaryCta, secondaryCta, onPrimaryCta, onSecondaryCta }: HeroProps) => {
   return (
-    <section className="py-20 bg-background">
+    <section className="py-20 bg-frnd-red">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-4xl text-center">
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 mb-8 bg-safety-green/10 border border-safety-green/20 rounded-full">
-            <Shield className="h-4 w-4 text-safety-green" />
-            <span className="text-sm font-medium text-safety-green">FRND Safety Centre</span>
+          <div className="inline-flex items-center gap-2 px-4 py-2 mb-8 bg-white/10 border border-white/20 rounded-full">
+            <Shield className="h-4 w-4 text-white" />
+            <span className="text-sm font-medium text-white">FRND Safety Centre</span>
           </div>
           
           {/* Main heading */}
-          <h1 className="text-4xl font-bold tracking-tight text-foreground mb-6 sm:text-5xl lg:text-6xl">
+          <h1 className="text-4xl font-bold tracking-tight text-frnd-red-foreground mb-6 sm:text-5xl lg:text-6xl">
             {title}
           </h1>
           
           {/* Subtitle */}
-          <p className="text-xl text-muted-foreground mb-10 leading-relaxed max-w-3xl mx-auto">
+          <p className="text-xl text-white/90 mb-10 leading-relaxed max-w-3xl mx-auto">
             {subtitle}
           </p>
           
@@ -36,7 +36,7 @@ export const Hero = ({ title, subtitle, primaryCta, secondaryCta, onPrimaryCta, 
             <Button 
               onClick={onPrimaryCta}
               size="lg"
-              className="bg-safety-green hover:bg-safety-green/90 text-safety-green-foreground"
+              className="bg-white text-frnd-red hover:bg-white/90"
             >
               <Shield className="h-5 w-5 mr-2" />
               {primaryCta}
@@ -45,7 +45,7 @@ export const Hero = ({ title, subtitle, primaryCta, secondaryCta, onPrimaryCta, 
               onClick={onSecondaryCta}
               variant="outline" 
               size="lg"
-              className="border-border hover:bg-card-hover"
+              className="border-white/20 text-white hover:bg-white/10"
             >
               <FileText className="h-5 w-5 mr-2" />
               {secondaryCta}
